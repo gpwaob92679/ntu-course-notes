@@ -1,0 +1,20 @@
+# Markdown renderer configuration
+[goldmark]
+  [goldmark.renderer]
+    unsafe = true
+  [goldmark.extensions]
+    typographer = false
+
+[tableOfContents]
+endLevel = 4
+ordered = false
+startLevel = 2
+
+[highlight]
+codeFences = true
+guessSyntax = true
+lineNoStart = 1
+lineNos = true
+lineNumbersInTable = true
+noClasses = false
+tabWidth = 2
