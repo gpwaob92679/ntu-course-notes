@@ -1,0 +1,15 @@
+{{- $location := absURL .Params.location -}}
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Redirecting...</title>
+    <link rel="canonical" href="{{ $location }}">
+    <meta name="robots" content="noindex">
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0; url={{ $location }}">
+  </head>
+  <body>
+    Redirecting to <a href="{{ $location }}">{{ $location }}</a>...
+  </body>
+</html>
