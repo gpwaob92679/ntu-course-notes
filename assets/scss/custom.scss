@@ -4,6 +4,56 @@
 
 :root {
   --base-font-family: "Open Sans","Noto Sans TC", var(--sys-font-family), var(--zh-font-family), sans-serif;
+  --code-text-color: #37474f;
+}
+
+.article-title {
+  font-size: 32px;
+}
+
+.article-content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+  p,
+  ul,
+  ol,
+  dl,
+  blockquote {
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+  blockquote {
+    >:first-child {
+      margin-top: 0;
+    }
+    >:last-child {
+      margin-bottom: 0;
+    }
+  }
+  hr {
+    height: 4px;
+    width: 95%;
+  }
+  .gallery {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  figure.gallery-image {
+    background-color: #fff;
+    box-shadow: 0 3px 6px 2px rgba(0, 0, 0, 0.17);
+    &:hover {
+      box-shadow: 0 3px 8px 2px rgba(0, 0, 0, 0.25);
+    }
+    padding: 8px;
+  }
 }
 
 .emoji {
