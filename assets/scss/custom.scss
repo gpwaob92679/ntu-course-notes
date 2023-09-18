@@ -30,6 +30,13 @@
     margin-top: 0;
     margin-bottom: 16px;
   }
+  ul ul,
+  ul ol,
+  ol ol,
+  ol ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
   blockquote {
     >:first-child {
       margin-top: 0;
@@ -42,6 +49,7 @@
     height: 4px;
     width: 95%;
   }
+
   .gallery {
     margin: 0 auto;
     max-width: 100%;
