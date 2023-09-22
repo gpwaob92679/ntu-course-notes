@@ -1,0 +1,20 @@
+#!/bin/bash
+#
+# Deploy hugo-generated site to the NTU homepage service.
+#
+# Usage:
+#   ./ntu_homepage_deploy USERNAME [PASSWORD]
+
+declare -a login
+if [[ -n "$2" ]]; then
+  login=(-u "$1,$2")
+elif [[ -n "$1" ]]; then
+  login=(-u "$1")
+else
+  echo "WARNING: Username not given" >&2
+fi
+
+lftp \
+  ${login[@]} \
+  -e 'ls && rm -r public_html && mirror -Rpv public public_html; exit' \
+  "homepage.ntu.edu.tw"
